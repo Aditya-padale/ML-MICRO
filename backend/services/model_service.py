@@ -19,10 +19,10 @@ if str(ROOT) not in sys.path:
 if str(ALT_ROOT) not in sys.path:
     sys.path.insert(0, str(ALT_ROOT))
 
-from advanced_change_detection import AdvancedChangeDetector, TimeSeriesAnalyzer
-from gradcam_utils import GradCAM
-from environmental_report_wrapper import create_report_generator
-from enhanced_area_detection import AreaCalculator
+from src.ml_modules.advanced_change_detection import AdvancedChangeDetector, TimeSeriesAnalyzer
+from src.utils.gradcam_utils import GradCAM
+from src.ml_modules.environmental_report_wrapper import create_report_generator
+from src.ml_modules.enhanced_area_detection import AreaCalculator
 
 IMG_SIZE = 224
 CLASS_NAMES = [
@@ -36,7 +36,7 @@ class ModelService:
         # Load env from repo root
         load_dotenv(dotenv_path=os.path.join(str(ROOT), '.env'))
 
-        model_path = os.getenv("MODEL_PATH", os.path.join(str(ROOT), "model_epoch_30.pth"))
+        model_path = os.getenv("MODEL_PATH", os.path.join(str(ROOT), "models/model_epoch_30.pth"))
         self.model = models.resnet18(weights=None)
         self.model.fc = nn.Linear(self.model.fc.in_features, len(CLASS_NAMES))
         self.model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))

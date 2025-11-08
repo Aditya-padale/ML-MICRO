@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     ALLOWED_FILE_TYPES: List[str] = [".jpg", ".jpeg", ".png", ".tiff", ".tif"]
     
     # ML Model
-    MODEL_PATH: str = "./model_epoch_30.pth"
+    MODEL_PATH: str = "../models/model_epoch_30.pth"
     DEVICE: str = "cpu"  # or "cuda" if available
     BATCH_SIZE: int = 4
     

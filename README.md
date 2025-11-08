@@ -1,6 +1,8 @@
-# 🛰️ SatelliteSight: AI-Powered Environmental Change Detection
+# 🛰️ Euro Clean ML - Satellite Land Use Classification
 
 An advanced satellite image analysis platform that combines computer vision, deep learning, and AI-powered environmental reporting to detect land use changes and predict environmental impacts.
+
+> 📚 **[View Complete Documentation](docs/README.md)** | **[API Documentation](docs/API.md)** | **[Deployment Guide](docs/DEPLOYMENT.md)**
 
 ## 🌟 Key Features
 
