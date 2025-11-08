@@ -1,15 +1,18 @@
 # Environment files (sensitive) - NEVER COMMIT THESE
 .env
-.env.*
 .env.local
 .env.*.local
 .env.development
 .env.production
 .env.test
 config/.env
-config/.env.*
+config/.env.development
+config/.env.production
 **/.env
-**/.env.*
+
+# Allow template files
+!**/.env.*.template
+!**/.env.template
 
 # API Keys and Secrets
 **/api_key*
