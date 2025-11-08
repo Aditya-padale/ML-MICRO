@@ -8,10 +8,10 @@ from typing import Dict, List, Any, Optional
 def create_report_generator():
     """Create a report generator, falling back to mock if imports fail"""
     try:
-        from environmental_report_generator import EnvironmentalReportGenerator
+        from .environmental_report_generator import EnvironmentalReportGenerator
         return EnvironmentalReportGenerator()
-    except ImportError as e:
-        print(f"Warning: Could not import EnvironmentalReportGenerator due to: {e}")
+    except (ImportError, ValueError, Exception) as e:
+        print(f"Warning: Could not initialize EnvironmentalReportGenerator due to: {e}")
         print("Using mock report generator instead")
         return MockReportGenerator()
 

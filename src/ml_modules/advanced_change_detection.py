@@ -221,7 +221,7 @@ class AdvancedChangeDetector:
         
         try:
             # Try to use AI-powered recommendations first
-            from environmental_report_generator import create_report_generator
+            from .environmental_report_generator import create_report_generator
             
             report_generator = create_report_generator()
             
