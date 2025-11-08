@@ -1,7 +1,24 @@
-# Environment files (sensitive)
+# Environment files (sensitive) - NEVER COMMIT THESE
 .env
+.env.*
 .env.local
 .env.*.local
+.env.development
+.env.production
+.env.test
+config/.env
+config/.env.*
+**/.env
+**/.env.*
+
+# API Keys and Secrets
+**/api_key*
+**/secret*
+**/*secret*
+**/*key*
+*.pem
+*.p12
+*.pfx
 
 # Python cache
 __pycache__/
