@@ -1,0 +1,24 @@
+streamlit
+torch
+torchvision
+numpy
+Pillow
+matplotlib
+opencv-python
+pandas
+seaborn
+plotly
+scikit-learn
+scipy
+scikit-image
+
+# LangChain and AI Integration
+langchain
+langchain-google-genai
+google-generativeai
+python-dotenv
+
+# Additional dependencies for enhanced detection
+rasterio
+geopandas
+shapely

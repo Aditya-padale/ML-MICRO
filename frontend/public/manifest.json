@@ -1,0 +1,107 @@
+{
+  "short_name": "SatAnalysis",
+  "name": "Satellite Analysis Platform",
+  "description": "Advanced AI-powered satellite imagery analysis for environmental monitoring and change detection",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2E7D32",
+  "background_color": "#F8FAFC",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["productivity", "education", "utilities"],
+  "screenshots": [
+    {
+      "src": "images/screenshot-desktop.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "375x667",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Upload Images",
+      "short_name": "Upload",
+      "description": "Upload satellite images for analysis",
+      "url": "/?action=upload",
+      "icons": [
+        {
+          "src": "images/upload-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "View Gallery",
+      "short_name": "Gallery",
+      "description": "Browse satellite image gallery",
+      "url": "/gallery",
+      "icons": [
+        {
+          "src": "images/gallery-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Analysis History",
+      "short_name": "History",
+      "description": "View previous analyses",
+      "url": "/history",
+      "icons": [
+        {
+          "src": "images/history-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "protocol_handlers": [
+    {
+      "protocol": "web+satellite",
+      "url": "/analyze?data=%s"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}
